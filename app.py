@@ -1,11 +1,8 @@
 import firebase_admin
 from firebase_admin import credentials, auth
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 
 app = Flask(__name__)
-
-cors = CORS(app)
 
 @app.route('/login', methods=['POST'])
 def give_status():
