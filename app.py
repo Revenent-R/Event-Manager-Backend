@@ -10,7 +10,7 @@ cors = CORS(app)
 @app.route('/login', methods=['POST'])
 def give_status():
 
-    cred = credentials.Certificate("serviceAccountKey.json")
+    cred = credentials.Certificate("/etc/secrets/serviceAccountKey.json")
     firebase_admin.initialize_app(cred)
 
     data = request.get_json()
