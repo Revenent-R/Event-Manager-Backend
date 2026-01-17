@@ -15,7 +15,6 @@ def give_status():
     if not data or "uid" not in data or "role" not in data:
         return jsonify({"error": "uid and role required"}), 400
 
-
     uid = data["uid"]
     role = data["role"]
 
