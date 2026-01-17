@@ -25,10 +25,10 @@ def give_status():
         auth.set_custom_user_claims(uid, {"admin": False})
 
     elif role == "admin":
-        club_name = data.get("club_name", "unknown")
+        club_name = data.get("club-name", "unknown")
         auth.set_custom_user_claims(uid, {
             "admin": True,
-            "club_name": club_name
+            "club-name": club_name
         })
 
     else:
