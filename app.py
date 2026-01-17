@@ -7,6 +7,10 @@ app = Flask(__name__)
 cred = credentials.Certificate("/etc/secrets/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
+@app.route("/")
+def health():
+    return jsonify({"status": "ok"}), 200
+
 @app.route('/login', methods=['POST'])
 def give_status():
 
