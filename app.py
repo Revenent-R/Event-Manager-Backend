@@ -19,7 +19,7 @@ def give_status():
     if data['role'] == 'user':
         auth.set_custom_user_claims(uid, {'admin': False})
     elif data['role'] == 'admin':
-        auth.set_custom_user_claims(uid, {'admin': True,'club-name':data['clubName']})
+        auth.set_custom_user_claims(uid, {'admin': True,'club-name':data['club-name']})
     print(f"{data['role']} role assigned")
 
 if __name__ == '__main__':
